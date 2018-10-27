@@ -3,4 +3,4 @@ set clipboard=unnamedplus
 filetype indent on
 set shiftwidth=2
 set expandtab
-set cc=80
+set cc=78

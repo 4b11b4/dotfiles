@@ -7,3 +7,5 @@
 	default = simple
 [alias]
 	ca = !git add . && git commit -m
+        suir = !git submodule update --init --recursive
+        stat = !git status
