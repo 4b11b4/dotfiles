@@ -1,0 +1,9 @@
+[credential]
+	helper = cache --timeout=21600
+[user]
+	email = antonbilbaeno@gmail.com
+	name = anton
+[push]
+	default = simple
+[alias]
+	ca = !git add . && git commit -m
