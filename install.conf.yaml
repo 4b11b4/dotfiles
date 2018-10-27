@@ -1,0 +1,9 @@
+- clean: ['~']
+- defaults:
+    link:
+        relink: true
+        create: true
+
+- link:
+    ~/.vimrc: vimrc
+    ~/.gitconfig: gitconfig
