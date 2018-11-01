@@ -6,4 +6,4 @@ set expandtab
 set cc=78
 
 " Set markdown files to wrap at 80 characters
-au BufRead,BufNewFile *.md setlocal textwidth=78
+set textwidth=78
