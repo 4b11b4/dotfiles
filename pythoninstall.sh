@@ -1,2 +1,2 @@
-sudo apt install python-setuptools
+sudo apt install python-setuptools ipython
 
