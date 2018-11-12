@@ -7,27 +7,30 @@ fi
 
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cd "${SCRIPT_DIR}/../submodule1" 
+printf "Updating SCH\n" 
+cd "sch" 
 git status
 git add -A
 git commit -m "$1"
-git push origin master
+git push 
 
-cd "${SCRIPT_DIR}/../submodule2" 
+printf "Updating SYM\n" 
+cd "../sym" 
 git status
 git add -A
 git commit -m "$1"
-git push origin master
+git push
 
-cd "${SCRIPT_DIR}/../submodule3" 
+printf "Updating FP\n" 
+cd "../fp" 
 git status
 git add -A
 git commit -m "$1"
-git push origin master
+git push
 
-printf "\n\nUpdating Super Project\n\n" 
+printf "Updating main\n" 
 cd .. 
 git status
 git add -A
-git commit -m "All Submodules Updated - $1"
-git push origin master
+git commit -m "ALLSUB: $1"
+git push
