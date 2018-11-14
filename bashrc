@@ -110,7 +110,9 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Functions
-psub () { ~/pub/dotfiles/scripts/psub.sh "$1"; }
+ups () { ~/pub/dotfiles/scripts/ups.sh "$1"; }
+downs() { ~/pub/dotfiles/scripts/downs.sh "$1"; }
+checks() { ~/pub/dotfiles/scripts/checks.sh; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
