@@ -1,9 +1,12 @@
 #!/bin/bash
 
-if [ "$#" -ne 2 ]; then
+if ! [ $# -eq 1 ]; then
   printf "\nEnter name of sch branch you want to checkout.\n"
   echo "(ex)   'downs roam'   |   'downs matter'"
-    exit
+  exit 1
+else
+  echo "Branch Name: $1"
+  echo ""
 fi
 
 printf "\n---->\nDo you want to pull all submodules?\n"
@@ -45,4 +48,4 @@ cd ..
 printf "\nBACK TO MAIN:\n"
 printf "If there are changes below...\nThe latest for each submodule was pulled, but main repo was tracking the submodule at an earlier commit. In other words, now you probably have a new version of fp or sym. In the worst case, kicad-libraries were updated and you may have to re-associate FPs.\n\n"
 git status
-printf "\n\nYou can commit these changes now or later.\n"
+printf "\n\nIf there are changes... you can commit now or later.\n"
