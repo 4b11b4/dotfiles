@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if ! [ $# -eq 1 ]; then
+
+if [ $# -eq 0 ]; then
   printf "\nNeed to write commit message to push to ALL submodules.\n"
   printf "(ex) ups 'stuff'\n\n"
   exit 1

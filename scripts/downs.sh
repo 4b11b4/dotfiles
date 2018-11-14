@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if ! [ $# -eq 1 ]; then
+echo "$#"
+if [ $# -ne 1 ]; then
   printf "\nEnter name of sch branch you want to checkout.\n"
   echo "(ex)   'downs roam'   |   'downs matter'"
   exit 1
@@ -8,6 +9,7 @@ else
   echo "Branch Name: $1"
   echo ""
 fi
+
 
 printf "\n---->\nDo you want to pull all submodules?\n"
 printf "Check if you have changes first.\n"
