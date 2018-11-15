@@ -1,8 +1,8 @@
 [credential]
 	helper = cache --timeout=21600
 [user]
-	email = antonbilbaeno@gmail.com
-	name = anton
+	email = 4b11b4@gmail.com
+	name = AB
 [push]
 	default = simple
 [alias]
