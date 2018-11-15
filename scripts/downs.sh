@@ -26,14 +26,12 @@ select yn in "Y" "N"; do
     esac
 done
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 printf "\nMAIN:\n" 
 git pull
 
 printf "\nSCH:\n" 
 cd "sch"
-git checkout "$1"
+git checkout "$branch"
 git pull
 
 printf "\nSYM:\n" 
