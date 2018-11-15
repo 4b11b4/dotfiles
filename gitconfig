@@ -9,5 +9,4 @@
 	ca = !git add . && git commit -m
         suir = !git submodule update --init --recursive
         stat = !git status
-        subup = !git pull --recurse-submodules && git submodule update
         adog = !git log --all --decorate --oneline --graph
