@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "$1"
 if [ -z "$1" ]; then
   printf "\nNeed to write commit message to push to ALL submodules.\n"
   printf "(ex) ups 'stuff'\n\n"
@@ -6,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 echo "Are you sure you want to push to all submodules?"
-echo "with commit message: $1"
+echo "with commit message: "$1""
 select yn in "Yes" "No"; do
     case $yn in
         Yes ) echo "Pushing..."; break;;
