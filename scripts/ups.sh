@@ -41,5 +41,6 @@ git push
 printf "\nIf you see that MAIN did not push changes...:\n"
 printf "Check your current directory?\n"
 printf "'ups' should be run from main repo folder\n"
-printf "e.g. ~/folktek/roam/\n"
-printf "If you DO have changes, push again from main repo folder\n"
+printf "e.g. ~/folktek/roam/\n\n"
+printf "If you DO have changes: simply 'cd ..' and\n"
+printf "press the UP arrow twice to re-run 'ups'\n"
