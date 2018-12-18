@@ -10,3 +10,15 @@
         suir = !git submodule update --init --recursive
         stat = !git status
         adog = !git log --all --decorate --oneline --graph
+[diff]
+	tool = meld
+[difftool "meld"]
+	path = /usr/bin/meld
+[difftool]
+	prompt = false
+[merge]
+	tool = meld
+[mergetool "meld"]
+	path = /usr/bin/meld
+[mergetool]
+	prompt = false
