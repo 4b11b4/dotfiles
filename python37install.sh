@@ -1,3 +1,5 @@
+# NOTE: may be easier to install this from "deadsnakes" ppa?
+
 # Install requirements
 sudo apt-get install -y build-essential
 sudo apt-get install -y checkinstall
