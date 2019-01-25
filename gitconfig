@@ -8,7 +8,6 @@
 [alias]
 	ca = !git add . && git commit -m
         suir = !git submodule update --init --recursive
-        stat = !git status
         adog = !git log --all --decorate --oneline --graph
 [diff]
 	tool = meld

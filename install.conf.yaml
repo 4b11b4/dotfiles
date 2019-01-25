@@ -3,8 +3,9 @@
     link:
         relink: true
         create: true
-
 - link:
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_fcts_2_scr: bash_fcts_2_scr

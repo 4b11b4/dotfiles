@@ -1,3 +1,14 @@
+# This is the default bashrc (for Linux Mint 16.04?)
+## 4b11b4 Custom Commands:
+### Aliases in ./bash_aliases
+### Functions(?) in ./bash_scripts
+
+# Everything below is default:
+## except:
+### HISTSIZE=-1: inf
+### colored GCC warnings: en
+### SDKMAN: i must have added this at some point
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -16,7 +27,7 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
+HISTSIZE=-1
 HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
@@ -89,7 +100,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -104,15 +115,21 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+alias a='git add .'
+#alias c='git commit -m $1'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
 # Functions
-ups () { ~/pub/dotfiles/scripts/ups.sh "$1"; }
-downs() { ~/pub/dotfiles/scripts/downs.sh $1; }
-checks() { ~/pub/dotfiles/scripts/checks.sh; }
+if [ -f ~/.bash_fcts_2_scr ]; then
+    . ~/.bash_fcts_2_scr
+fi
+
+# Functions
+#ups() { ~/pub/dotfiles/scripts/ups.sh "$1"; }
+#downs() { ~/pub/dotfiles/scripts/downs.sh $1; }
+#checks() { ~/pub/dotfiles/scripts/checks.sh; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
