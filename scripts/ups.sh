@@ -18,19 +18,19 @@ done
 printf "\nSCH:\n" 
 cd "sch" 
 git add -A
-git commit -m "$1"
+git commit -m "ups: $1"
 git push 
 
 printf "\nSYM:\n" 
 cd "../sym" 
 git add -A
-git commit -m "$1"
+git commit -m "ups: $1"
 git push
 
 printf "\nFP:\n" 
 cd "../fp" 
 git add -A
-git commit -m "$1"
+git commit -m "ups: $1"
 git push
 
 printf "\nMAIN:\n"
