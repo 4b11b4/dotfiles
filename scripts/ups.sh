@@ -36,7 +36,7 @@ git push
 printf "\nMAIN:\n"
 cd ..
 git add -A
-git commit -m "ups.sh: $1"
+git commit -m "ups: $1"
 git push
 printf "\nIf you see that MAIN did not push changes...:\n"
 printf "Check your current directory?\n"
