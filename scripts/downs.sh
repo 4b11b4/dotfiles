@@ -15,7 +15,7 @@ printf "\n---->\nDo you want to pull all submodules?\n"
 printf "Check if you have changes first.\n"
 printf "<----\n\n"
 echo "Script will check out these branches:"
-echo "- sch      : $branch"
+echo "- sch      : master"
 echo "- fp & sym : master"
 echo ""
 
@@ -31,7 +31,7 @@ git pull
 
 printf "\nSCH:\n" 
 cd "sch"
-git checkout "$branch"
+git checkout master 
 git pull
 
 printf "\nSYM:\n" 
