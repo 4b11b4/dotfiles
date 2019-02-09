@@ -9,3 +9,4 @@
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
     ~/.bash_fct_2_scr: bash_fct_2_scr
+    ~/.vim/ftplugin/python.vim: python.vim

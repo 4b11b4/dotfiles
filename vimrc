@@ -1,4 +1,5 @@
 set number
+syntax on
 set clipboard=unnamedplus
 filetype indent on
 set shiftwidth=2
