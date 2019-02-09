@@ -1,10 +1,7 @@
+set smartindent " Do smart autoindenting when starting a new line
 set number
 syntax on
 set clipboard=unnamedplus
 filetype indent on
-set shiftwidth=2
-set expandtab
-set cc=78
-
-" Set markdown files to wrap at 80 characters
-au BufRead,BufNewFile *.md setlocal textwidth=79
+highlight ColorColumn ctermbg=7
+set cc=80
