@@ -4,20 +4,22 @@ printf "Enter name of sch branch you want to checkout.\n"
 echo "(ex)   'downs roam'   |   'downs matter'"
 
 if [ -z "$1" ]; then
-  printf "\n***\nNo branch name entered.\nUsing name of directory.\n***\n"
-  branch=${PWD##*/}
+  printf "\n***\nNo branch name entered.\nUsing master branch.\n***\n"
+  branch="master"
+  #printf "\n***\nNo branch name entered.\nUsing name of dir.\n***\n"
+  #branch=${PWD##*/}
 else
   printf "\nBranch Name: $1"
   branch=$1
 fi
 
-printf "\n---->\nDo you want to pull all submodules?\n"
+printf "\n---->\nDo you want to pull in all submodules?\n"
 printf "Check if you have changes first.\n"
 printf "<----\n\n"
 echo "Script will check out these branches:"
-echo "- sch      : master"
+echo "- sch      : "$branch""
 echo "- fp & sym : master"
-echo ""
+echo
 
 select yn in "Y" "N"; do
     case $yn in
