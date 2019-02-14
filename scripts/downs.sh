@@ -33,7 +33,7 @@ git pull
 
 printf "\nSCH:\n" 
 cd "sch"
-git checkout master 
+git checkout "$branch"
 git pull
 
 printf "\nSYM:\n" 
