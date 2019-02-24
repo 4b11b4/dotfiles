@@ -196,3 +196,11 @@ done
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/ab/.sdkman"
 [[ -s "/home/ab/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ab/.sdkman/bin/sdkman-init.sh"
+
+# virtualenv wrapper
+# pip3 install --user virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
