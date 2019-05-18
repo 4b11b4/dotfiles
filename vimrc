@@ -1,3 +1,6 @@
+set nocompatible " nocompatible is set for user vimrcs
+filetype off " filetype detection off
+
 set number " show line numbers
 set relativenumber " relative line numbers
 set ruler " show column number?
