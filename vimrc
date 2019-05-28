@@ -61,7 +61,8 @@ set cc=79
 set showmatch " show matching [], (), {}
 syntax on " syntax highlighting
 let python_highlight_all = 1
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+"highlight BadWhitespace ctermbg=red guibg=red
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 
 " EDITING
@@ -89,16 +90,4 @@ nnoremap <space> za
 "set shiftwidth=4 " number of spaces when using >> or <<
 "set autoindent " use current indent for new line
 "set expandtab " expand tabs to spaces
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
-au BufNewFile,BufRead *.js, *.html, *.css
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix

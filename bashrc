@@ -1,7 +1,7 @@
 # This is the default bashrc (for Linux Mint 16.04?)
 ## 4b11b4 Custom Commands:
 ### Aliases in ./bash_aliases
-### Functions(?) in ./bash_scripts
+### Functions(?) in ./bash_fct_2_scr
 
 # Everything below is default:
 ## except:
@@ -14,13 +14,11 @@
 # for examples
 
 
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
-
 
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -33,11 +31,9 @@ HISTSIZE=-1
 HISTFILESIZE=2000
 
 
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
 
 
 # If set, the pattern "**" used in a pathname expansion context will
@@ -45,10 +41,8 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 
-
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 
 
 # set variable identifying the chroot you work in (used in the prompt below)

@@ -2,4 +2,3 @@
 ups() { ~/pub/dotfiles/scripts/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/scripts/downs.sh $1; }
 checks() { ~/pub/dotfiles/scripts/checks.sh; }
-cap() { git add .; git commit "$1"; git push; }
