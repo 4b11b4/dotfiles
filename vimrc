@@ -17,24 +17,6 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " status bar
 call vundle#end()
 filetype plugin indent on
 
-
-" PLUGIN SETTINGS
-"" YOUCOMPLETEME
-let g:ycm_autoclose_preview_window_after_completion=1 " hide autocmp after use
-" shortcut for goto definition
-" note: My leader key is mapped to space, so space-g will goto definition of whatever I’m currently on. That’s helpful when I’m exploring new code.
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" Python with virtualenv support
-" make YouCompleteMe aware of virtualenv
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
-
 "" SIMPYLFOLD
 let g:SimpylFold_docstring_preview=1
 
