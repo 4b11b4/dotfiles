@@ -22,7 +22,7 @@ let g:SimpylFold_docstring_preview=1
 
 "" SOLARIZED
 " toggle light/dark
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 
 "" NERDTREE
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
