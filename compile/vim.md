@@ -1,3 +1,6 @@
+# Notes from
+# https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source
+
 ./configure \
 --with-features=huge \
 --with-compiledby=anton \
