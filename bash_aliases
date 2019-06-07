@@ -1,2 +1,2 @@
-#used to have git aliases here, but those are now in gitconfig
-#due to g<complete> modification in bashrc for git commands
+# Previously had git aliases here, now in gitconfig.
+# (to allow for g<complete> modification in bashrc)

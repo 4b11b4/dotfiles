@@ -14,6 +14,7 @@
 # for examples
 
 
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -21,14 +22,14 @@ case $- in
 esac
 
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
+
+# Don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=-1
 HISTFILESIZE=2000
+
 
 
 # check the window size after each command and, if necessary,
@@ -36,13 +37,16 @@ HISTFILESIZE=2000
 shopt -s checkwinsize
 
 
+
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 #shopt -s globstar
 
 
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 
 
 # set variable identifying the chroot you work in (used in the prompt below)
@@ -165,7 +169,7 @@ fi
 
 
 
-# git g<command> autocompletion
+# Custom git g<command> autocompletion
 ## from github/mwhite: g<complete> style autocomplete for git
 ## commands rather than having to type 'git '
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -191,7 +195,9 @@ done
 export SDKMAN_DIR="/home/ab/.sdkman"
 [[ -s "/home/ab/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ab/.sdkman/bin/sdkman-init.sh"
 
+
 # virtualenv wrapper
+# Added when working with Zach on Potify
 # pip3 install --user virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
