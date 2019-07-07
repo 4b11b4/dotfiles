@@ -44,7 +44,7 @@ set backspace=indent,eol,start
 
 " SEARCHING
 set incsearch " search as characters are entered
-set hlsearch " highlight matches
+"set hlsearch " highlight matches
 
 
 " FOLDING
