@@ -10,16 +10,19 @@ call vundle#begin() " initialize Vundle
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle
 Plugin 'vim-scripts/indentpython.vim' " help with PEP8 indentation
 Plugin 'scrooloose/nerdtree' " file tree
-Plugin 'tpope/vim-fugitive' " git from vim
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " status bar
 call vundle#end()
 filetype plugin indent on
+
 
 "" NERDTREE
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
+
 " BUFFERS
 set clipboard=unnamedplus "lets you copy all over the place
+
+" REMAP
+inoremap jj <Esc>
 
 
 " VISUAL
@@ -54,7 +57,7 @@ set foldlevel=99
 "set foldlevelstart=10
 "set foldnestmax=10
 " remap 'za' to spacebar for fold/unfolding
-nnoremap <space> za
+"nnoremap <space> za
 
 
 " INDENTATION
