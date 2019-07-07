@@ -8,27 +8,18 @@ set encoding=utf-8
 set rtp+=~/.vim/bundle/Vundle.vim " set runtime path to include Vundle
 call vundle#begin() " initialize Vundle
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle
-Plugin 'tmhedberg/SimpylFold' " help with folding
 Plugin 'vim-scripts/indentpython.vim' " help with PEP8 indentation
-Plugin 'altercation/vim-colors-solarized' " colors
 Plugin 'scrooloose/nerdtree' " file tree
 Plugin 'tpope/vim-fugitive' " git from vim
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " status bar
 call vundle#end()
 filetype plugin indent on
 
-"" SIMPYLFOLD
-let g:SimpylFold_docstring_preview=1
-
-"" SOLARIZED
-" toggle light/dark
-call togglebg#map("<F5>")
-
 "" NERDTREE
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " BUFFERS
-set clipboard=unnamedplus
+set clipboard=unnamedplus "lets you copy all over the place
 
 
 " VISUAL
@@ -39,7 +30,7 @@ set cursorline
 set showcmd " show (partial) command in status line
 set lazyredraw " disable re-drawing during macros (which i don't have)
 highlight ColorColumn ctermbg=7
-set cc=79
+set cc=79 "stop at 78
 set showmatch " show matching [], (), {}
 syntax on " syntax highlighting
 let python_highlight_all = 1
