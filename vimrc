@@ -24,7 +24,6 @@ set clipboard=unnamedplus "lets you copy all over the place
 " REMAP
 inoremap jj <Esc>
 
-
 " VISUAL
 set number " show line numbers
 set relativenumber " relative line numbers
