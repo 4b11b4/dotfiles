@@ -1,0 +1,5 @@
+# Get BitWarden Password, Remove Newline At End, Copy To Clipboard
+bw get password 1st | tr -d '\n' | xclip -i -selection clipboard
+
+# Two Strings
+grep -e "string1" -e "string2"
