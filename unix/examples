@@ -1,5 +1,9 @@
 # Get BitWarden Password, Remove Newline At End, Copy To Clipboard
-bw get password 1st | tr -d '\n' | xclip -i -selection clipboard
+bw get password "github" | tr -d '\n' | xclip -i -selection clipboard
+...should really just be using SSH... 
+
+# Clone A Repository With Username
+git clone https://username@github.com/group/repository.git
 
 # Two Strings
 grep -e "string1" -e "string2"
