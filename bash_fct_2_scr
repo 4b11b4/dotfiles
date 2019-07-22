@@ -1,4 +1,10 @@
 # This gets inserted into bashrc.
+
+# tmux
+ta() { ~/pub/dotfiles/bash-scripts/ta.sh "$1"; }
+tn() { ~/pub/dotfiles/bash-scripts/tn.sh "$1 $2 $3"; }
+
+# Dealing With SubModules
 ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
-downs() { ~/pub/dotfiles/bash-scripts/downs.sh $1; }
+downs() { ~/pub/dotfiles/bash-scripts/downs.sh "$1"; }
 checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
