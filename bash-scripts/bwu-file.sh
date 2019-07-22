@@ -2,13 +2,31 @@
 
 # Helper for dealing with registering session key export variable
 
+# Save stdout directly to a variable
 #STDOUT="$("bw unlock")"
-eval "exec > >(tee temp.txt)"
+
+# Initially I saved to a variable, instead of creating a temp file.
+# This did not work immediately, so I saved to a file.
+# It may still be possible to do save straight to a variable,
+# as the reason the export variable was
+# not persisting initially
+# was because I needed to "source" this script.
+# (eg) in bashrc: "source scr.sh" not "./scr.sh" 
+
+FILE="~/pub/dotfiles/temp.txt"
+if test -f "$FILE"; then
+    echo "$FILE exist"
+    eval "rm $FILE"
+fi 
+
+# Save stdout to file, read file to variable
+eval "exec > >(tee $FILE)"
 eval "bw unlock"
 STDOUT="$(cat ~/pub/dotfiles/temp.txt)"
 
-printf "\n0. Bitwarden output:\n"
-echo "$STDOUT"
+# Show output from Bitwarden CLI
+#printf "\n0. Bitwarden output:\n"
+#echo "$STDOUT"
 
 printf "\n1. Retrive export command:\n"
 # Basic bash string manipulation.
@@ -16,11 +34,13 @@ printf "\n1. Retrive export command:\n"
 EXPORT="$(echo "${STDOUT:120:-307}")"
 echo "$EXPORT"
 
+# Register session key variable with bash
 printf "\n2. Export session key.\n"
 eval "$EXPORT"
 
+# Show that the key matches the registered export variables
 printf "\n3. Check current BW_SESSION variable:\n"
-eval "export -p"
+eval "export -p | grep BW"
 
-#printf "\n4. STDOUT again\n"
-#STDOUT=`cat ~/pub/dotfiles/temp.txt`
+# Remove temporary file
+eval "rm $FILE"
