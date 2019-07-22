@@ -1,21 +1,16 @@
 #!/bin/bash
 # Helper for dealing with registering the session key
 
-OUT_VAR="$(bw unlock)"
+STDOUT="$(bw unlock)"
 
-printf "\n\nOUT_VAR:\n"
-echo "$OUT_VAR"
+printf "\n1. Retrive export command:\n"
+# Basic bash string manipulation.
+# WARNING: This method assumes output from `bw unlock` doesn't change...
+EXPORT="$(echo "${STDOUT:120:-307}")"
+echo "$EXPORT"
 
-#CUT="$(echo "$OUT_VAR" | cut -d':' -f 2)"
-#printf "\n\nCUT:\n"
-#echo "$CUT"
+printf "\n2. Export session key.\n"
+eval "$EXPORT"
 
-
-printf "\n\nECHO STR:\n"
-STR="$(echo "${OUT_VAR:120:-307}")"
-echo "$STR"
-
-printf "\n\nEVAL STR:\n"
-eval "$SED"
-
-#CUT2="$("echo $CUT | cut -d'"' -f 2 | cut -d'!' -f 2")"
+printf "\n3. Check current BW_SESSION variable:\n"
+eval "export -p | grep BW"
