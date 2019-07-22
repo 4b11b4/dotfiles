@@ -2,7 +2,7 @@
 
 # tmux
 ta() { ~/pub/dotfiles/bash-scripts/ta.sh "$1"; }
-tn() { ~/pub/dotfiles/bash-scripts/tn.sh "@1"; }
+tn() { ~/pub/dotfiles/bash-scripts/tn.sh "$1"; }
 
 # Dealing With SubModules
 ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
