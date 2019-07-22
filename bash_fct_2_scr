@@ -8,3 +8,6 @@ tn() { ~/pub/dotfiles/bash-scripts/tn.sh "$1"; }
 ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/bash-scripts/downs.sh "$1"; }
 checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
+
+# Bitwarden CLI
+bwu() { ~/pub/dotfiles/bash-scripts/bwu.sh; }
