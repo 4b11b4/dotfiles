@@ -11,4 +11,4 @@ checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
 
 # Bitwarden CLI
 bwu() { ~/pub/dotfiles/bash-scripts/bwu.sh; }
-bwu-file() { ~/pub/dotfiles/bash-scripts/bwu-file.sh; }
+bwu-file() { source ~/pub/dotfiles/bash-scripts/bwu-file.sh; }
