@@ -9,5 +9,5 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-echo "Loading "$1"..."
+echo 'Loading "$1"...'
 tmux kill-session -t "$1"
