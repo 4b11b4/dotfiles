@@ -10,4 +10,4 @@ if [ -z "$1" ]; then
 fi
 
 echo "Loading "$1"..."
-tmux attach-session -t "$1"
+tmux kill-session -t "$1"
