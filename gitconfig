@@ -8,8 +8,7 @@ la = "!git config -l | grep alias | cut -c 7-"
 s = status -s
 a = !git log --all --decorate --oneline --graph
 l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-gba = branch -va
+b = branch -va
 v = status -v -v
 
 # Commit
@@ -19,7 +18,6 @@ u = reset HEAD
 # Push
 p = push
 pub = "!git push -u origin $(git branch-name)"
-
 
 # Branch
 cob = checkout -b
