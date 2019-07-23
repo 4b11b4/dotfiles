@@ -12,3 +12,6 @@ checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
 # Bitwarden CLI
 bwu() { source ~/pub/dotfiles/bash-scripts/bwu.sh; }
 bwp() { ~/pub/dotfiles/bash-scripts/bwp.sh "$1"; }
+
+# KiCad Plot
+plot() { ~/pub/kicad-scripts/plot/plot.py "$1"; }
