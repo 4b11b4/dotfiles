@@ -4,7 +4,7 @@
 sudo apt update
 sudo apt upgrade
 
-## ngspice
+# ngspice
 cd ~/pub/
 sudo apt install libreadline6-dev libx11-dev libice-dev libxext-dev libxmu-dev
 wget https://sourceforge.net/projects/ngspice/files/ng-spice-rework/27/ngspice-27.tar.gz
@@ -17,7 +17,7 @@ make -j4
 sudo make install
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
-## OCE
+# OCE
 cd ~/pub/
 sudo apt install libfreetype6-dev
 git clone https://github.com/tpaviot/oce.git
@@ -28,8 +28,8 @@ cmake ../
 make -j4
 sudo make install/strip
 
-## kicad
-*may need to uncomment #deb-src for _universe_ line in /etc/apt/sources.list in order to get apt to find the sources for build-dep
+# kicad
+may need to uncomment #deb-src for _universe_ line in /etc/apt/sources.list in order to get apt to find the sources for build-dep
 sudo apt build-dep kicad
 sudo apt install cmake-gui libglm-dev libboost-test-dev
 cd ~/pub/
