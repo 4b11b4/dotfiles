@@ -24,12 +24,13 @@ esac
 
 
 # Don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth
+HISTCONTROL=ignoreboth:erasedups
 # append to the history file, don't overwrite it
 shopt -s histappend
 HISTSIZE=-1
 HISTFILESIZE=2000
-
+# After each command, save and reload history (for tmux)
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 
 # check the window size after each command and, if necessary,
