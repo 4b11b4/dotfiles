@@ -3,7 +3,6 @@ set nocompatible " nocompatible is set for user vimrcs
 filetype off " filetype detection off
 set encoding=utf-8
 
-
 " PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim " set runtime path to include Vundle
 call vundle#begin() " initialize Vundle
@@ -13,10 +12,8 @@ Plugin 'scrooloose/nerdtree' " file tree
 call vundle#end()
 filetype plugin indent on
 
-
 "" NERDTREE
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
 
 " BUFFERS
 set clipboard=unnamedplus "lets you copy all over the place
@@ -39,15 +36,15 @@ let python_highlight_all = 1
 "highlight BadWhitespace ctermbg=red guibg=red
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-
 " EDITING
 set backspace=indent,eol,start
-
 
 " SEARCHING
 set incsearch " search as characters are entered
 "set hlsearch " highlight matches
 
+" SCROLLING
+set scrolloff=9 " keep num lines above/below
 
 " FOLDING
 "set foldenable
