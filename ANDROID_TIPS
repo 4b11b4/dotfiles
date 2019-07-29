@@ -1,7 +1,20 @@
-# Typing
+# Keyboard 
 * pressing space then moving L or R moves the cursor
 * holding down on backspace then swiping L or R deletes words
+* swipe from shift to any letter
+* swipe from symbols
+* change case: select text + shift
+
+# Camera
+* double tap power
+* inside app: flick wrist twice to switch cameras
+* volume buttons take picture
+* camera can follow links, QR codes, phone numbers... 
+* camera can identify plants
 
 # Swipes
-* custom fingerprint sensor gestures
-* custom swipes from side of screen
+## Built-in
+* two fingers down from top brings town entire panel
+## Custom
+* fingerprint sensor gestures
+* swipes from side of screen
