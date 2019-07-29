@@ -1,8 +1,6 @@
 [alias]
-
 # List All Alias'
 la = "!git config -l | grep alias | cut -c 7-"
-
 
 # Status
 s = status -s
@@ -17,10 +15,10 @@ u = reset HEAD
 
 # Push
 p = push
-pub = "!git push -u origin $(git branch-name)"
+pub = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
 # Pull
-gpu = pull
+pu = pull
 
 # Branch
 cob = checkout -b
@@ -31,12 +29,13 @@ suir = !git submodule update --init --recursive
 
 
 [push]
+default = simple
 # upstream - push the current branch to its upstream branch...
 # simple - like upstream, but refuses to push if the upstream branch’s name is different from the local one...
 # current - push the current branch to a branch of the same name.
 #
-# "simple" is the safe method. It makes when pushing the branch
-#   to push to already exists (and is at the same position?).
+# "simple" is the safe method. When pushing, push to the branch
+#   only if it already exists and is up to date with the latest commit(?).
 ##
 ##  This can cause confusion for beginners:
 ##    Say you create a new branch.
@@ -49,8 +48,8 @@ suir = !git submodule update --init --recursive
 ###     ...will fail to push because it doesn't have a previous record
 ###       of any branches with your new branch name.
 ####
+####      ** TL;DR you need to tell git to push your new branch up to github
 ####      ** see alias: "gpub"
-default = simple
 
 [diff]
 tool = meld
