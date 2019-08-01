@@ -19,6 +19,7 @@ pub = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
 # Pull
 pu = pull
+pus = !git pull && git suir
 
 # Branch
 cob = checkout -b
