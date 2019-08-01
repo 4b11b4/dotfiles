@@ -27,6 +27,9 @@ cob = checkout -b
 # Submodule
 suir = !git submodule update --init --recursive
 
+# Reset
+gres = reset --hard
+
 
 
 [push]
