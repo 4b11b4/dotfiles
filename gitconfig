@@ -83,7 +83,7 @@ prompt = false
 
 [mergetool "kdiff3"]
 #cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED" --qall
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
