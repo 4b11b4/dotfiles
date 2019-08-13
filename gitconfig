@@ -1,5 +1,5 @@
 [alias]
-# List All Alias'
+# List All Aliases
 la = "!git config -l | grep alias | cut -c 7-"
 
 # Status
@@ -31,7 +31,7 @@ suir = !git submodule update --init --recursive
 res = reset --hard
 
 
-
+## The rest of the config file...
 [push]
 default = simple
 # upstream - push the current branch to its upstream branch...
@@ -63,26 +63,28 @@ email = 4b11b4@gmail.com
 name = AB
 
 [diff]
-tool = p4merge
+tool = kdiff3
 
 [difftool]
 prompt = false
 
-[difftool "p4merge"]
-cmd = p4merge "$LOCAL" "$REMOTE"
+[difftool "kdiff3"]
+#cmd = p4merge "$LOCAL" "$REMOTE"
+cmd = kdiff3 "$LOCAL" "$REMOTE"
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
 
 [merge]
 keepBackup = false;
-tool = p4merge
+tool = kdiff3 
 
 [mergetool]
 prompt = false
 
-[mergetool "p4merge"]
-cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+[mergetool "kdiff3"]
+#cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false

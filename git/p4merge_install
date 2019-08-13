@@ -5,3 +5,24 @@ wget http://www.perforce.com/downloads/perforce/r18.4/bin.linux26x86_64/p4v.tgz
 tar zxvf p4v.tgz
 sudo cp -r p4v-* /usr/local/p4v/
 sudo ln -s /usr/local/p4v/bin/p4merge /usr/local/bin/p4merge
+
+# gitconfig
+[merge]
+    keepBackup = false;
+    tool = p4merge
+[mergetool]
+    prompt = false
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+    tool = p4merge
+[difftool]
+    prompt = false
+[difftool "p4merge"]
+    cmd = p4merge "$LOCAL" "$REMOTE"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
