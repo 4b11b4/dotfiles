@@ -64,37 +64,37 @@ name = AB
 
 
 [diff]
-#tool = kdiff3
-tool = meld
+tool = kdiff3
+#tool = meld
 #tool = p4merge
 
 [difftool]
 prompt = false
 
-#[difftool "kdiff3"]
-[difftool "meld"]
+[difftool "kdiff3"]
+#[difftool "meld"]
 #[difftool "p4merge"]
-#cmd = kdiff3 "$LOCAL" "$REMOTE"
+cmd = kdiff3 "$LOCAL" "$REMOTE"
 #cmd = p4merge "$LOCAL" "$REMOTE"
-cmd = meld "$LOCAL" "$REMOTE"
+#cmd = meld "$LOCAL" "$REMOTE"
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
 
 [merge]
-#tool = kdiff3 
-tool = meld 
+tool = kdiff3 
+#tool = meld 
 #tool = p4merge 
 
 [mergetool]
 prompt = false
 
-#[mergetool "kdiff3"]
+[mergetool "kdiff3"]
 #[mergetool "p4merge"]
-[mergetool "meld"]
-#cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED" --qall
+#[mergetool "meld"]
+cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED" --qall
 #cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED" #merged in middle 
-cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"   #base in middle 
+#cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"   #base in middle 
 #cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
 keepTemporaries = false
 trustExitCode = false
