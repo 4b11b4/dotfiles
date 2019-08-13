@@ -1,1 +1,30 @@
+# ubuntu
 sudo apt install kdiff3
+
+# kdiff3 settings
+uncheck: Directory -> Backup files 
+
+# gitconfig
+[diff]
+tool = kdiff3
+
+[difftool]
+prompt = false
+
+[difftool "kdiff3"]
+cmd = kdiff3
+keepTemporaries = false
+trustExitCode = false
+keepBackup = false
+
+[merge]
+tool = kdiff3 
+
+[mergetool]
+prompt = false
+
+[mergetool "kdiff3"]
+cmd = kdiff3
+keepTemporaries = false
+trustExitCode = false
+keepBackup = false
