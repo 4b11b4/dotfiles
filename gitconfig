@@ -55,27 +55,34 @@ default = simple
 ####      ** TL;DR you need to tell git to push your new branch up to github
 ####      ** see alias: "gpub"
 
-[diff]
-tool = meld
-
-[difftool "meld"]
-path = /usr/bin/meld
-
-[difftool]
-prompt = false
-
-[merge]
-tool = meld
-
-[mergetool "meld"]
-path = /usr/bin/meld
-
-[mergetool]
-prompt = false
-
 [credential]
 helper = cache --timeout=21600
 
 [user]
 email = 4b11b4@gmail.com
 name = AB
+
+[diff]
+tool = p4merge
+
+[difftool]
+prompt = false
+
+[difftool "p4merge"]
+cmd = p4merge "$LOCAL" "$REMOTE"
+keepTemporaries = false
+trustExitCode = false
+keepBackup = false
+
+[merge]
+keepBackup = false;
+tool = p4merge
+
+[mergetool]
+prompt = false
+
+[mergetool "p4merge"]
+cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+keepTemporaries = false
+trustExitCode = false
+keepBackup = false
