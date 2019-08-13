@@ -1,0 +1,7 @@
+# from https://gist.github.com/AaronGhent/8466611
+# last updated wget link Mar 8, 2019 to r18.4
+
+wget http://www.perforce.com/downloads/perforce/r18.4/bin.linux26x86_64/p4v.tgz
+tar zxvf p4v.tgz
+sudo cp -r p4v-* /usr/local/p4v/
+sudo ln -s /usr/local/p4v/bin/p4merge /usr/local/bin/p4merge
