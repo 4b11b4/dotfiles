@@ -70,7 +70,7 @@ prompt = false
 
 [difftool "kdiff3"]
 #cmd = p4merge "$LOCAL" "$REMOTE"
-cmd = kdiff3
+cmd = kdiff3 "$LOCAL" "$REMOTE"
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
@@ -83,7 +83,7 @@ prompt = false
 
 [mergetool "kdiff3"]
 #cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-cmd = kdiff3
+cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
