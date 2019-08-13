@@ -4,10 +4,10 @@
 ta() { ~/pub/dotfiles/bash-scripts/ta.sh "$1"; }
 tn() { ~/pub/dotfiles/bash-scripts/tn.sh "$1"; }
 tk() { ~/pub/dotfiles/bash-scripts/tk.sh "$1"; }
-tl() { ~/pub/dotfiles/bash-scripts/tl.sh "$1"; }
+tl() { ~/pub/dotfiles/bash-scripts/tl.sh; }
 
 # git
-gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists...
+gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists in ~/pub/
 
 # Dealing With SubModules
 ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }

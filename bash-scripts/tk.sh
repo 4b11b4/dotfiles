@@ -9,7 +9,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-echo 'Killing "$1"...'
+printf "Killing "$1"...\n"
 
 select yn in "Y" "N"; do
     case $yn in
