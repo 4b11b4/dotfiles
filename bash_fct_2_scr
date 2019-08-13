@@ -14,6 +14,7 @@ ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/bash-scripts/downs.sh "$1"; }
 checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
 sub() { ~/pub/dotfiles/bash-scripts/sub.sh "$1" ; }
+gcs() { ~/pub/dotfiles/bash-scripts/gcs.sh "$1" ; }
 
 # Bitwarden CLI
 bwu() { source ~/pub/dotfiles/bash-scripts/bwu.sh; }
