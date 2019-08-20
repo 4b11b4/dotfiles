@@ -13,6 +13,7 @@ gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists in ~/pub/
 ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/bash-scripts/downs.sh "$1"; }
 checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
+ini() { ~/pub/dotfiles/bash-scripts/ini.sh "$1" ; }
 sub() { ~/pub/dotfiles/bash-scripts/sub.sh "$1" ; }
 gcs() { ~/pub/dotfiles/bash-scripts/gcs.sh "$1" ; }
 
