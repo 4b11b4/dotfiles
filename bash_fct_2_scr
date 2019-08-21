@@ -19,6 +19,7 @@ gcs() { ~/pub/dotfiles/bash-scripts/gcs.sh "$1" ; }
 
 # Bitwarden CLI
 bwu() { source ~/pub/dotfiles/bash-scripts/bwu.sh; }
+bwpass() { ~/pub/dotfiles/bash-scripts/bwpass.sh; }
 bwp() { ~/pub/dotfiles/bash-scripts/bwp.sh "$1"; }
 
 # KiCad Plot
