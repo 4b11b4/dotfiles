@@ -2,6 +2,8 @@
 set nocompatible " nocompatible is set for user vimrcs
 filetype off " filetype detection off
 set encoding=utf-8
+set statusline=%f%m%r%h%w\ [%Y]\ [0x%02.2B]%<\ %F%=%4v,%4l\ %3p%%\ of\ %L
+set laststatus=2
 
 " PLUGINS
 set rtp+=~/.vim/bundle/Vundle.vim " set runtime path to include Vundle
