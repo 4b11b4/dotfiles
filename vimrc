@@ -11,6 +11,7 @@ call vundle#begin() " initialize Vundle
 Plugin 'gmarik/Vundle.vim' " let Vundle manage Vundle
 Plugin 'vim-scripts/indentpython.vim' " help with PEP8 indentation
 Plugin 'scrooloose/nerdtree' " file tree
+Plugin 'leafOfTree/vim-vue-plugin' " vue syntax highlighting
 call vundle#end()
 filetype plugin indent on
 
@@ -65,3 +66,7 @@ set foldlevel=99
 "set autoindent " use current indent for new line
 "set expandtab " expand tabs to spaces
 au BufNewFile,BufRead *.py set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
+au BufNewFile,BufRead *.html set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix
+au BufNewFile,BufRead *.css set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix
+au BufNewFile,BufRead *.js set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix
+au BufNewFile,BufRead *.vue set tabstop=2 softtabstop=2 shiftwidth=2 textwidth=79 expandtab fileformat=unix
