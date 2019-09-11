@@ -62,7 +62,6 @@ helper = cache --timeout=21600
 email = 4b11b4@gmail.com
 name = AB
 
-
 [diff]
 tool = kdiff3
 #tool = meld

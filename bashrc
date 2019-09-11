@@ -204,3 +204,8 @@ export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
 source ~/.local/bin/virtualenvwrapper.sh
+
+
+
+# Set vim as the default text editor
+export EDITOR=vim
