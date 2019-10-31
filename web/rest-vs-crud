@@ -1,0 +1,39 @@
+# REST versus CRUD
+
+## Confusion
+Some of the confusion around REST and CRUD has to do with the overlap of
+basic commands used in both processes.
+
+## CRUD
+* CREATE, READ, UPDATE, DELETE
+
+## REST (Representational State Transfer)
+* PUT, GET, POST, DELETE
+
+### Overview
+REST is an architectural style designed for distribution of media. It is a
+"standard" in "service application development". Web APIs often conform to
+the REST standard. Each REST command is centered around a resource. A resource
+is anything that can be pointed to via HTTP (image, website, document, etc).
+
+### Principles
+1. Client-Server Mandate
+The client and server are separated and thus REST is a distributed approach.
+
+2. Statelessness
+
+3. Cache
+It is mandated that server responses are labeled as cachable or not.
+
+4. Interface / Uniform Contract
+There cannot be multiple, self-contained interfaces within an API. There
+is only one interface to interact with.
+
+5. Layered System
+
+
+6. Optional: Code-On-Demand
+
+
+# References
+bmc.com/blogs/rest-vs-crud-whats-the-difference/
