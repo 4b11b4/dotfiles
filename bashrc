@@ -192,8 +192,8 @@ done
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/ab/.sdkman"
-[[ -s "/home/ab/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ab/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="~/.sdkman"
+[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
 
 
 # virtualenv wrapper
