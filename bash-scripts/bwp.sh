@@ -11,3 +11,4 @@ fi
 printf "Copying "$1" password to clipboard\n"
 
 eval "bw get password "$1" | tr -d '\n' | xclip -i -selection clipboard"
+eval "bw get password "$1" | tr -d '\n' | clip.exe"
