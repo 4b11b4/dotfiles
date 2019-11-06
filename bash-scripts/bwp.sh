@@ -8,7 +8,7 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-printf "Copying "$1" password to clipboard\n"
-
+printf "Copying "$1" password to clipboard using xclip\n"
 eval "bw get password "$1" | tr -d '\n' | xclip -i -selection clipboard"
+printf "Copying "$1" password to clipboard using clip.exe\n"
 eval "bw get password "$1" | tr -d '\n' | clip.exe"
