@@ -1,0 +1,10 @@
+"100% Matte Sn - T"
+"Std Solder (SnPb) - H"
+"Non-Magnetic Sn - N"
+"Non-Magnetic SnPb - M"
+"Nickel Gold - A"
+"Gold - G"
+"Solder Fused - K"
+"Hot Solder Dipped - C"
+"Ni-Pd-Au - P"
+

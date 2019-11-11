@@ -1,8 +1,0 @@
-ToleranceRadioButton.Items.Add(".1pF - B");
-            ToleranceRadioButton.Items.Add(".25pF - C");
-            ToleranceRadioButton.Items.Add(".5pF - D");
-            ToleranceRadioButton.Items.Add("1% - F");
-            ToleranceRadioButton.Items.Add("2% - G");
-            ToleranceRadioButton.Items.Add("5% - J");
-            ToleranceRadioButton.Items.Add("10% - K");
-            ToleranceRadioButton.Items.Add("20% - M");

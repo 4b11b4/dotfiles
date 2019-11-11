@@ -1,0 +1,10 @@
+adioButton.Items.Add("100% Matte Sn - T");
+            EndMetalRadioButton.Items.Add("Std Solder (SnPb) - H");
+            EndMetalRadioButton.Items.Add("Non-Magnetic Sn - N");
+            EndMetalRadioButton.Items.Add("Non-Magnetic SnPb - M");
+            EndMetalRadioButton.Items.Add("Nickel Gold - A");
+            EndMetalRadioButton.Items.Add("Gold - G");
+            EndMetalRadioButton.Items.Add("Solder Fused - K");
+            EndMetalRadioButton.Items.Add("Hot Solder Dipped - C");
+            EndMetalRadioButton.Items.Add("Ni-Pd-Au - P");
+            EndMetalRadioButton.SelectedIndex = 0;
