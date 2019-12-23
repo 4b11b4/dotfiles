@@ -209,3 +209,5 @@ source ~/.local/bin/virtualenvwrapper.sh
 
 # Set vim as the default text editor
 export EDITOR=vim
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
