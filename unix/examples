@@ -17,3 +17,6 @@ git clone https://4b11b4@github.com/folktek/repo.git
 
 # Two Strings
 grep -e "str1" -e "str2"
+
+# Find and Replace Recursively
+find . -type f -name "*.txt" -print0 | xargs -0 sed -i '' -e 's/foo/bar/g'
