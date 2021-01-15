@@ -1,3 +1,4 @@
+# begin git aliases --- only using 'g' --- (e.g. gs, gca, gp, etc)
 [alias]
 # List All Aliases
 la = "!git config -l | grep alias | cut -c 7-"
@@ -9,8 +10,9 @@ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --
 v = status -v -v
 
 # Commit
+ga = git commit -m
 ca = !git add . && git commit -m
-u = reset HEAD
+am = git commit --amend --no-edit
 
 # Push
 p = push
@@ -29,9 +31,11 @@ suir = !git submodule update --init --recursive
 
 # Reset
 res = reset --hard
+u = reset HEAD
 
 
-## The rest of the config file...
+
+# begin config file
 [push]
 default = simple
 # upstream - push the current branch to its upstream branch...

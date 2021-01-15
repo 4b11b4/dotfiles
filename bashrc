@@ -214,4 +214,4 @@ export EDITOR=vim
 
 
 # Use snaps first
-export PATH = "/snap/bin/:$PATH"
+export PATH="/snap/bin:$PATH"
