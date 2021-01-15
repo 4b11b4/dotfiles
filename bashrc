@@ -211,3 +211,7 @@ source ~/.local/bin/virtualenvwrapper.sh
 export EDITOR=vim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+# Use snaps first
+export PATH = "/snap/bin/:$PATH"
