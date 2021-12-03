@@ -1,4 +1,0 @@
-# List of things to install from a clean install
-[x] sudo apt install tmux
-[] vundle
-[] bw-cli

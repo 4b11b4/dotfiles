@@ -1,7 +1,0 @@
-# In general...
-* You need to close and re-open your terminal for the ./install to take effect.
-* You can first try './install && exec bash' to restart(?) bash
-
-# TMUX:
-* you must first clone the tpm (tmux plugin manager)
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
