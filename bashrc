@@ -182,7 +182,13 @@ function_exists() {
     return $?
 }
 
-for al in `__git_aliases`; do
+
+#for al in `__git_aliases`; do
+# from github/mwhite: dasong commented on Feb 4, 2019
+# https://gist.github.com/mwhite/6887990#gistcomment-2828436
+# As of git 2.18.0, __git_aliases has been replace with git --list-cmds=alias
+
+for al in `git --list-cmds=alias`; do
     alias g$al="git $al"
     
     complete_func=_git_$(__git_aliased_command $al)
@@ -194,17 +200,6 @@ done
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="~/.sdkman"
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
-
-
-# virtualenv wrapper
-# Added when working with Zach on Potify
-# pip3 install --user virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-source ~/.local/bin/virtualenvwrapper.sh
-
 
 
 # Set vim as the default text editor
