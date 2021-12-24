@@ -210,3 +210,8 @@ export EDITOR=vim
 
 # Use snaps first
 export PATH="/snap/bin:$PATH"
+
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
