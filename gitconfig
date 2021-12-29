@@ -12,6 +12,8 @@ bl = branch -va
 bc = checkout -b
 
 # Commit
+a = add
+m = commit -m 
 ca = !git add . && git commit -m
 am = git commit --amend --no-edit
 
