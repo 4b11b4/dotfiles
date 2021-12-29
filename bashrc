@@ -183,47 +183,42 @@ function_exists() {
     return $?
 }
 
-#ub ver                                                                                                                                                                                                 
-cat /etc/issue | awk '{print $2}' | awk -F. '{print $1}'                      
-distro=$(lsb_release -i | cut -f2)                                             
-#echo "dis: ${distro,,}"                                                          
-ver=$(lsb_release -r | cut -f2)                                                
-#echo "ver: ${ver}"                                                               
-main=$(echo $ver | cut -d . -f 1)
-#echo "main: $main"
-
-
 #for al in `__git_aliases`; do
 # from github/mwhite: dasong commented on Feb 4, 2019
 # https://gist.github.com/mwhite/6887990#gistcomment-2828436
 # As of git 2.18.0, __git_aliases has been replace with git --list-cmds=alias
 
+#ub ver                                                                                                                                                                                                 
+#cat /etc/issue | awk '{print $2}' | awk -F. '{print $1}'                      
+
+distro=$(lsb_release -i | cut -f2)                                             
+ver=$(lsb_release -r | cut -f2)                                                
+main=$(echo $ver | cut -d . -f 1)
+#echo "dis: ${distro,,}"                                                          
+#echo "ver: ${ver}"                                                               
+#echo "main: ${main}"
+
+# written obviously
 als=$(__git_aliases)
 if [ "$main" == "18" ]; then
-    echo "18"
+    echo "$main"
     als=$(__git_aliases)
 fi
 if [ "$main" == "20" ]; then
-    echo "20"
+    echo "$main"
     als=$(git --list-cmds=alias)
 fi
-
 #echo "${als}"
-
-#for al in $als; do
-#    echo "al: $al"
-#done
 
 for al in `__git_aliases`; do
     alias g$al="git $al"
-    
     complete_func=_git_$(__git_aliased_command $al)
     function_exists $complete_fnc && __git_complete g$al $complete_func
 done
 
 
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#MUST BE AT THE END FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="~/.sdkman"
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
 
@@ -231,6 +226,8 @@ export SDKMAN_DIR="~/.sdkman"
 
 # Set vim as the default text editor
 export EDITOR=vim
+
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
