@@ -186,11 +186,11 @@ function_exists() {
 #ub ver                                                                                                                                                                                                 
 cat /etc/issue | awk '{print $2}' | awk -F. '{print $1}'                      
 distro=$(lsb_release -i | cut -f2)                                             
-echo "dis: ${distro,,}"                                                          
+#echo "dis: ${distro,,}"                                                          
 ver=$(lsb_release -r | cut -f2)                                                
-echo "ver: ${ver}"                                                               
+#echo "ver: ${ver}"                                                               
 main=$(echo $ver | cut -d . -f 1)
-echo "main: $main"
+#echo "main: $main"
 
 
 #for al in `__git_aliases`; do
@@ -199,15 +199,20 @@ echo "main: $main"
 # As of git 2.18.0, __git_aliases has been replace with git --list-cmds=alias
 
 als=$(__git_aliases)
+if [ "$main" == "18" ]; then
+    echo "18"
+    als=$(__git_aliases)
+fi
 if [ "$main" == "20" ]; then
     echo "20"
     als=$(git --list-cmds=alias)
 fi
-echo "${als}"
 
-for al in $als; do
-    echo "al: $al"
-done
+#echo "${als}"
+
+#for al in $als; do
+#    echo "al: $al"
+#done
 
 for al in `__git_aliases`; do
     alias g$al="git $al"
