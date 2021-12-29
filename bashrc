@@ -1,14 +1,13 @@
+# 4b11b4 Custom Commands
+
+
+
+## alias | ./bash_aliases
+## fcts | ./bash_fct_2_scr
+
+
+
 # This is the default bashrc (for Linux Mint 16.04?)
-## 4b11b4 Custom Commands:
-### Aliases in ./bash_aliases
-### Functions(?) in ./bash_fct_2_scr
-
-# Everything below is default:
-## except:
-### HISTSIZE=-1: inf
-### colored GCC warnings: en
-### SDKMAN: i must have added this at some point
-
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples

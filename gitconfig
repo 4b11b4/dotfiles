@@ -1,41 +1,46 @@
-# begin git aliases --- only using 'g' --- (e.g. gs, gca, gp, etc)
+# 'g<complete>' install via bashrc
+# (eg: gs, gca, gals)
+
+
+
 [alias]
-# List All Aliases
-la = "!git config -l | grep alias | cut -c 7-"
-
-# Status
-s = status -s
-la = !git log --all --decorate --oneline --graph
-l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-v = status -v -v
-
-# Commit
-ga = git commit -m
-ca = !git add . && git commit -m
-am = git commit --amend --no-edit
-
-# Push
-p = push
-pub = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-
-# Pull
-pl = pull
-ps = !git pull && git suir
+# Help
+als = "!git config -l | grep alias | cut -c 7-"
 
 # Branch
-b = branch -va
+bl = branch -va
 bc = checkout -b
 
-# Submodule
-suir = !git submodule update --init --recursive
+# Commit
+ca = !git add . && git commit -m
+am = git commit --amend --no-edit
 
 # Reset
 res = reset --hard
 u = reset HEAD
 
+# Status
+s = status -s
+l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+la = !git log --all --decorate --oneline --graph
+v = status -v -v
+d = diff
+
+# Submodule
+suir = !git submodule update --init --recursive
+ps = !git pull && git suir
+
+# Pull
+pl = pull
+
+# Push
+p = push
+pub = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+#end alias
 
 
-# begin config file
+
+# begin config
 [push]
 default = simple
 # upstream - push the current branch to its upstream branch...
