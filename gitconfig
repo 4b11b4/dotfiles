@@ -107,5 +107,13 @@ cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED" --qall
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
+
+# Enforce SSH
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[url "ssh://git@bitbucket.org/"]
+  insteadOf = https://bitbucket.org/
+#[url "ssh://git@dev.azure.com/"]
+#  insteadOf = https://dev.azure.com/
