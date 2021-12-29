@@ -107,3 +107,5 @@ cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED" --qall
 keepTemporaries = false
 trustExitCode = false
 keepBackup = false
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
