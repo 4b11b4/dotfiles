@@ -33,6 +33,7 @@ HISTFILESIZE=2000
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -182,13 +183,33 @@ function_exists() {
     return $?
 }
 
+#ub ver                                                                                                                                                                                                 
+cat /etc/issue | awk '{print $2}' | awk -F. '{print $1}'                      
+distro=$(lsb_release -i | cut -f2)                                             
+echo "dis: ${distro,,}"                                                          
+ver=$(lsb_release -r | cut -f2)                                                
+echo "ver: ${ver}"                                                               
+main=$(echo $ver | cut -d . -f 1)
+echo "main: $main"
+
 
 #for al in `__git_aliases`; do
 # from github/mwhite: dasong commented on Feb 4, 2019
 # https://gist.github.com/mwhite/6887990#gistcomment-2828436
 # As of git 2.18.0, __git_aliases has been replace with git --list-cmds=alias
 
-for al in `git --list-cmds=alias`; do
+als=$(__git_aliases)
+if [ "$main" == "20" ]; then
+    echo "20"
+    als=$(git --list-cmds=alias)
+fi
+echo "${als}"
+
+for al in $als; do
+    echo "al: $al"
+done
+
+for al in `__git_aliases`; do
     alias g$al="git $al"
     
     complete_func=_git_$(__git_aliased_command $al)
@@ -202,14 +223,17 @@ export SDKMAN_DIR="~/.sdkman"
 [[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
 
 
+
 # Set vim as the default text editor
 export EDITOR=vim
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
+
 # Use snaps first
 export PATH="/snap/bin:$PATH"
+
 
 
 # asdf
