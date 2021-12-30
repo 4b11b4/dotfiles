@@ -8,7 +8,7 @@ als = "!git config -l | grep alias | cut -c 7-"
 
 # Branch
 bl = branch -va
-bc = checkout -b
+b = checkout -b
 
 # Commit
 a = add
@@ -39,7 +39,7 @@ pl = pull
 
 # Push
 p = push
-pub = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+pu = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 #end alias
 
 
