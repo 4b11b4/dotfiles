@@ -1,6 +1,5 @@
-# 'g<complete>' install via bashrc
-# (eg: gs, gca, gals)
-
+# 'g<complete>' install via bashrc (eg: gl, gp, gs, gca, gals)
+# use "!" to chain
 
 
 [alias]
@@ -29,7 +28,7 @@ v = status -v -v
 
 # What's the difference between you and me?
 d = diff
-dl = diff HEAD^.. #HEAD implied
+dl = !git diff HEAD^.. && git log -2
 
 # Submodule
 suir = !git submodule update --init --recursive
