@@ -173,7 +173,7 @@ main=$(echo $ver | cut -d . -f 1)
 #echo "main: ${main}"
 
 # written obviously
-als=$(__git_aliases)
+als=""
 if [ "$main" == "18" ]; then
     als=$(__git_aliases)
 fi
@@ -181,7 +181,7 @@ if [ "$main" == "20" ]; then
     als=$(git --list-cmds=alias)
 fi
 #echo "${als}"
-for al in `__git_aliases`; do
+for al in $als; do
     alias g$al="git $al"
     complete_func=_git_$(__git_aliased_command $al)
     function_exists $complete_fnc && __git_complete g$al $complete_func
