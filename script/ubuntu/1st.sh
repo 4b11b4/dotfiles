@@ -2,6 +2,7 @@ cd ~ # assume run from home
 
 # basics
 sudo apt install git
+sudo apt install xclip # cat file | xclip
 
 # vim
 sudo apt install vim
