@@ -19,7 +19,7 @@ filetype plugin indent on
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
 " BUFFERS
-set clipboard=unnamedplus "lets you copy all over the place
+set clipboard=unnamedplus "copy to '+' clipboard 
 
 " REMAP
 inoremap jj <Esc>
