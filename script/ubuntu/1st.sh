@@ -1,12 +1,12 @@
 cd ~ # assume run from home
 
 # basics
-sudo apt install git
-sudo apt install xclip # cat file | xclip
+sudo apt install -y git
+sudo apt install -y xclip # cat file | xclip
 
 # vim
-sudo apt install vim
-sudo apt install vim-gtk # +clipboard
+sudo apt install -y vim
+sudo apt install -y vim-gtk # +clipboard
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # puter lang
