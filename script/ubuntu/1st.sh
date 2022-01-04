@@ -15,7 +15,8 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 # .files
 mkdir pub
 git clone https://github.com/4b11b4/dotfiles.git pub/dotfiles
-./pub/dotfiles/install
+~/pub/dotfiles/scripts/ubuntu/garbage.sh
+~/pub/dotfiles/install
 
 # ssh > pw
 #ssh-keygen
