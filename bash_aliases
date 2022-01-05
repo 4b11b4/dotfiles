@@ -1,8 +1,9 @@
 # ls 
 alias ld="ls -lv --group-directories-first"
-alias ll='ls -alF'                                                             
-alias la='ls -la'                                                               
-alias l='ls -CF'                                                                                                                                                                                               
+alias l='ls -alF'                                                               
+
+
+
 # colorful ls
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -16,7 +17,7 @@ fi
 
 
 
-# clipboard
+# clipboard (e.g. echo 'text' | v)
 alias v='xclip -selection clipboard'
 
 
