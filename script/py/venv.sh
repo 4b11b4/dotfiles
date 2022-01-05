@@ -1,5 +1,6 @@
 # assumes py3.6+
 
+# if install via asdf, ignore next 4 lines
 sudo apt install python3-pip 
 sudo apt install python3-venv
 # recommend use system pip for user pip install
