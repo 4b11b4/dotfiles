@@ -8,7 +8,7 @@ als = "!git config -l | grep alias | cut -c 7-"
 
 # Branch
 bl = branch -va
-b = branch
+b = checkout 
 bc = checkout -b
 
 # Commit
