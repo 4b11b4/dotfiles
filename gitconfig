@@ -10,14 +10,21 @@ als = "!git config -l | grep alias | cut -c 7-"
 bl = branch -va
 b = checkout 
 bn = checkout -b
-bdl = git branch -d
-bdr = git push origin --delete
+bdl = branch -d
+bdr = push origin --delete
+
+# Stage
+a = add
 
 # Commit
-a = add
-m = commit -m 
+c = commit
+cm = commit -m
 ca = !git add . && git commit -m
-am = git commit --amend --no-edit
+am = commit --amend --no-edit #gets ugly if already pushed
+
+# Merge
+m = merge
+ms = merge --squash
 
 # Reset
 res = reset --hard
@@ -29,10 +36,6 @@ l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --
 la = !git log --all --decorate --oneline --graph
 v = status -v -v
 
-# What's the difference between you and me?
-d = diff
-dl = !git diff HEAD^.. && git log -2
-
 # Submodule
 suir = !git submodule update --init --recursive
 ps = !git pull && git suir
@@ -43,6 +46,10 @@ pl = pull
 # Push
 p = push
 pu = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+
+# What's the difference between you and me?
+d = diff
+dl = !git diff HEAD^.. && git log -2
 #end alias
 
 
