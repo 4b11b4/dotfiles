@@ -27,7 +27,7 @@ HISTCONTROL=ignoreboth:erasedups
 # append to the history file, don't overwrite it
 shopt -s histappend
 HISTSIZE=-1
-HISTFILESIZE=2000
+HISTFILESIZE=10000
 # After each command, save and reload history (for tmux)
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
