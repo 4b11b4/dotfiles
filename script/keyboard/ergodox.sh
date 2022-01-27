@@ -5,11 +5,11 @@
 apt install -y libusb-dev
 
 # download wally to pub, make executable
-wget -P ~/pub/ -O wally https://configure.ergodox-ez.com/wally/linux
+wget -O ~/pub/wally https://configure.ergodox-ez.com/wally/linux
 chmod +x ~/pub/wally
 
 # create rules file in order to access low-level device (keyboard)
-mv ~/pub/dotfiles/script/keyboard/50-wally.rules /etc/udev/rules.d/
+cp ~/pub/dotfiles/script/keyboard/50-wally.rules /etc/udev/rules.d/
 
 # make sure user part of plugdev group (not always default)
 groupadd plugdev
