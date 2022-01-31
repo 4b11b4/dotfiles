@@ -20,7 +20,7 @@ a = add
 c = commit
 cm = commit -m
 ca = !git add . && git commit -m
-am = commit --amend --no-edit #gets ugly if already pushed
+mend = commit --amend --no-edit #gets ugly if already pushed
 
 # Merge
 m = merge
