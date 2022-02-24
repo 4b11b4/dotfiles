@@ -10,3 +10,6 @@ asdf global erlang latest
 asdf plugin add elixir 
 asdf install elixir latest
 asdf global elixir latest
+
+## hex (package manager)
+mix local.hex
