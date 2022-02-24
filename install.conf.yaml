@@ -10,3 +10,4 @@
     ~/.bash_aliases: bash_aliases
     ~/.bash_fct_2_scr: bash_fct_2_scr
     ~/.tmux.conf: tmux.conf
+    ~/.tool-versions: tool-versions
