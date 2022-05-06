@@ -212,12 +212,3 @@ export PATH="/snap/bin:$PATH"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
-
-# from ros install script
-# (assumes 'ab' as user)
-source /opt/ros/melodic/setup.bash
-source /home/ab/interbotix_ws/devel/setup.bash
-export ROS_IP=$(echo `hostname -I | cut -d" " -f1`)
-if [ -z "$ROS_IP" ]; then
-	export ROS_IP=127.0.0.1
-fi
