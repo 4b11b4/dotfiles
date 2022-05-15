@@ -1,26 +1,26 @@
 # This gets inserted into bashrc.
 
 # tmux
-ta() { ~/pub/dotfiles/bash-scripts/ta.sh "$1"; }
-tn() { ~/pub/dotfiles/bash-scripts/tn.sh "$1"; }
-tk() { ~/pub/dotfiles/bash-scripts/tk.sh "$1"; }
-tl() { ~/pub/dotfiles/bash-scripts/tl.sh; }
+ta() { ~/pub/dotfiles/script/bash/ta.sh "$1"; }
+tn() { ~/pub/dotfiles/script/bash/tn.sh "$1"; }
+tk() { ~/pub/dotfiles/script/bash/tk.sh "$1"; }
+tl() { ~/pub/dotfiles/script/bash/tl.sh; }
 
 # git
 gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists in ~/pub/
 
 # Dealing With SubModules
-ups() { ~/pub/dotfiles/bash-scripts/ups.sh "$1"; }
-downs() { ~/pub/dotfiles/bash-scripts/downs.sh "$1"; }
-checks() { ~/pub/dotfiles/bash-scripts/checks.sh; }
-ini() { ~/pub/dotfiles/bash-scripts/ini.sh "$1" ; }
-sub() { ~/pub/dotfiles/bash-scripts/sub.sh "$1" ; }
-gcs() { ~/pub/dotfiles/bash-scripts/gcs.sh "$1" ; }
+ups() { ~/pub/dotfiles/script/bash/ups.sh "$1"; }
+downs() { ~/pub/dotfiles/script/bash/downs.sh "$1"; }
+checks() { ~/pub/dotfiles/script/bash/checks.sh; }
+ini() { ~/pub/dotfiles/script/bash/ini.sh "$1" ; }
+sub() { ~/pub/dotfiles/script/bash/sub.sh "$1" ; }
+gcs() { ~/pub/dotfiles/script/bash/gcs.sh "$1" ; }
 
 # Bitwarden CLI
-bwu() { source ~/pub/dotfiles/bash-scripts/bwu.sh; }
-bwpass() { ~/pub/dotfiles/bash-scripts/bwpass.sh; }
-bwp() { ~/pub/dotfiles/bash-scripts/bwp.sh "$1"; }
+bwu() { source ~/pub/dotfiles/script/bash/bwu.sh; }
+bwpass() { ~/pub/dotfiles/script/bash/bwpass.sh; }
+bwp() { ~/pub/dotfiles/script/bash/bwp.sh "$1"; }
 
 # KiCad Plot
-plot() { ~/pub/kicad-scripts/plot/plot.py "$1"; }
+plot() { ~/pub/kicad-script/plot/plot.py "$1"; }
