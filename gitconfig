@@ -3,6 +3,9 @@
 
 
 [alias]
+# Stage
+a = add
+
 # Help
 als = "!git config -l | grep alias | cut -c 7-"
 
@@ -13,14 +16,15 @@ bn = checkout -b
 bdl = branch -d
 bdr = push origin --delete
 
-# Stage
-a = add
-
 # Commit
 c = commit
 cm = commit -m
 ca = !git add . && git commit -m
 mend = commit --amend --no-edit #gets ugly if already pushed
+
+# What's the difference between you and me?
+d = diff
+dl = !git diff HEAD^.. && git log -2
 
 # Merge
 m = merge
@@ -29,6 +33,7 @@ ms = merge --squash
 # Reset
 res = reset --hard
 u = reset HEAD
+cln = clean -fd
 
 # Status
 s = status -s
@@ -46,10 +51,6 @@ pl = pull
 # Push
 p = push
 pu = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-
-# What's the difference between you and me?
-d = diff
-dl = !git diff HEAD^.. && git log -2
 #end alias
 
 
