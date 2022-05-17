@@ -32,8 +32,10 @@ ms = merge --squash
 
 # Reset
 res = reset --hard
+rf = checkout HEAD -- 
 u = reset HEAD
 cln = clean -fd
+clr = !git reset --hard && git clean -fd
 
 # Status
 s = status -s
