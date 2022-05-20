@@ -20,7 +20,7 @@ bdr = push origin --delete
 c = commit
 cm = commit -m
 ca = !git add . && git commit -m
-mend = commit --amend --no-edit #gets ugly if already pushed
+mend = commit --amend --no-edit #ugly if already pushed
 
 # What's the difference between you and me?
 d = diff
@@ -31,11 +31,11 @@ m = merge
 ms = merge --squash
 
 # Reset
-res = reset --hard
-rf = checkout HEAD -- 
+res = reset --hard #existing files
+resf = checkout HEAD -- #one
+rfs = clean -fd #rm new file
 u = reset HEAD
-cln = clean -fd
-clr = !git reset --hard && git clean -fd
+reset = !git reset --hard && git clean -fd
 
 # Status
 s = status -s
