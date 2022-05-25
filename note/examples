@@ -11,6 +11,11 @@ git tag -a v1.0 -m "this is v1.0" c45ab4c5
 * (by default) if you do not put a commit number... tag the current commit
 ### Push Tags
 git push origin --tags
+## Merge
+### Squash Into One
+git checkout main
+git merge --squash bugfix
+git commit
 
 ## Clone A Repository With Username
 git clone https://4b11b4@github.com/folktek/repo.git
@@ -20,3 +25,6 @@ grep -e "str1" -e "str2"
 
 # Find and Replace Recursively
 find . -type f -name "*.txt" -print0 | xargs -0 sed -i '' -e 's/foo/bar/g'
+
+# Find and Replace in All Files in Current Directory (breaks on dirs)
+sed -i 's///g' *
