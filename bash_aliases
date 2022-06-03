@@ -3,8 +3,7 @@ alias ld="ls -lv --group-directories-first"
 alias l='ls -alF'                                                               
 
 
-
-# colorful ls
+# color
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
@@ -16,20 +15,16 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 
-
-# clipboard (e.g. echo 'text' | v)
+# pipe to copy (e.g. echo 'text' | v)
 alias v='xclip -selection clipboard'
 
 
-
-#1 ch = worth it
+# 1 ch, worth
 alias vi='vim'
 
 
-
-#node-red
+# node-red
 alias nr='node-red'
-
 
 
 # Add an "alert" alias for long running commands.  Use like so:                

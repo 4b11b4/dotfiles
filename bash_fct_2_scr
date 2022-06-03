@@ -1,4 +1,4 @@
-# This gets inserted into bashrc.
+# bash: function mapped to script (alias for script)
 
 # tmux
 ta() { ~/pub/dotfiles/script/bash/ta.sh "$1"; }
@@ -8,8 +8,7 @@ tl() { ~/pub/dotfiles/script/bash/tl.sh; }
 
 # git
 gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists in ~/pub/
-
-# Dealing With SubModules
+# submodules
 ups() { ~/pub/dotfiles/script/bash/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/script/bash/downs.sh "$1"; }
 checks() { ~/pub/dotfiles/script/bash/checks.sh; }
