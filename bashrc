@@ -11,8 +11,10 @@ esac
 
 
 
-# Don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth:erasedups
+# bash: history infinite
+## ignore cmds with space in front (e.g. password, shutdown)
+### must remember to use... could make alias with space in front...
+HISTCONTROL=ignorespace
 # append to the history file, don't overwrite it
 shopt -s histappend
 HISTSIZE=-1
