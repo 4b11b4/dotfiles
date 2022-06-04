@@ -7,7 +7,7 @@ tk() { ~/pub/dotfiles/script/bash/tk.sh "$1"; }
 tl() { ~/pub/dotfiles/script/bash/tl.sh; }
 
 # git
-gsu() { ~/pub/git-summary/git-summary -q; } # assumes repo exists in ~/pub/
+gsu() { ~/pub/git-summary/git-summary -q; } # assume repo in ~/pub
 # submodules
 ups() { ~/pub/dotfiles/script/bash/ups.sh "$1"; }
 downs() { ~/pub/dotfiles/script/bash/downs.sh "$1"; }
@@ -23,3 +23,6 @@ bwp() { ~/pub/dotfiles/script/bash/bwp.sh "$1"; }
 
 # KiCad Plot
 plot() { ~/pub/kicad-script/plot/plot.py "$1"; }
+
+# bash: history top
+hist() { ~/pub/dotfiles/script/bash/hist.sh; }
