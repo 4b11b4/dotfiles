@@ -11,18 +11,21 @@ esac
 
 
 
-# bash: history infinite
-## ignore cmds with space in front (e.g. password, shutdown)
+# bash: history
+## infinite
+HISTSIZE=
+HISTFILESIZE=
+#export HISTTIMEFORMAT="[%F %T] "
+export HISTFILE=~/.bash_inf_history
+## ignore cmds prefixed with space (eg password, shutdown)
 ### must remember to use... could make alias with space in front...
 HISTCONTROL=ignorespace
-# append to the history file, don't overwrite it
+## append to history, no overwrite
 shopt -s histappend
-HISTSIZE=-1
-HISTFILESIZE=10000
 
 
 
-# tmux: after command, save, reload history
+# tmux: save, reload history after command
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 
