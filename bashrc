@@ -15,12 +15,13 @@ esac
 ## infinite
 HISTSIZE=
 HISTFILESIZE=
-#export HISTTIMEFORMAT="[%F %T] "
+### keep old history: run cmd after install, restart bash
+### cp .bash_history .bash_inf_history
 export HISTFILE=~/.bash_inf_history
 ## ignore cmds prefixed with space (eg password, shutdown)
 ### must remember to use... could make alias with space in front...
 HISTCONTROL=ignorespace
-## append to history, no overwrite
+## no overwrite, append
 shopt -s histappend
 
 
