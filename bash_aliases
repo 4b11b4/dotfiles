@@ -1,5 +1,6 @@
 # ls 
 alias ld="ls -lv --group-directories-first"
+alias lsd="ls -ld */"
 alias l='ls -alF'                                                               
 
 
