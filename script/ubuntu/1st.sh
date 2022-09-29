@@ -13,12 +13,16 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # puter langs
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1
 
+# noise
+sudo apt install -y sox
+
 # .files
 mkdir pub
 git clone https://github.com/4b11b4/dotfiles.git pub/dotfiles
 ~/pub/dotfiles/scripts/ubuntu/garbage.sh
 ~/pub/dotfiles/install
 
+# setup ssh
 # ssh > pw
 #ssh-keygen
 #gedit .ssh/id_rsa.pub
